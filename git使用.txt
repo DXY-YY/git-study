@@ -1,0 +1,31 @@
+1.下载git 淘宝镜像下载https://npm.taobao.org/mirrors/git-for-windows/
+2.下载后执行
+	git config --global user.name "Your Name"
+    git config --global user.email "email@example.com"
+	运行	git config --list看是否更改成功
+3.新建文件夹 打开cmd 运行 git init初始化  文件夹出现影藏文件  .git 版本库
+在文件夹内创建一个文件xx.xx
+4.将文件加入版本库， 打开 gitbush命令 
+输入git add . 加入文件命令
+git commit -m “xxxxxxxx” 输入描述信息命令
+git status 查看当前状态
+git diff 查看修改了的地方
+git log 查看提交记录
+
+
+提交到git仓库
+1，打开github 官网 创建一个仓库
+2. 配置秘钥 本地C:\Users\Administrator\.ssh路径有一个 id_rsa.pub 文件
+打开github 点击头像下拉框有一个设置 里面有一个SSH and XXX 创建一个新秘钥
+将id_rsa.pub 文件文件里面的类容填入
+3.打开gitbush 输入 git remote add origin （git@github.com:lwchun1983/leviLee.git）自己在github创建的仓库地址
+可以输入git remote -v查看是否已经关联过一个仓库 如果有先
+删除已有的GitHub远程库：git remote rm origin 
+在重新关联
+
+本地与云端配置成功
+4.将云端仓库中的文件 
+下拉到本地
+git pull origin master
+文件改好之后将版本库里面的文件
+git push origin master 到云端仓库
